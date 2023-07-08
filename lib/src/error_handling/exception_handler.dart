@@ -4,7 +4,7 @@ import 'failure.dart';
 
 class ExceptionHandler {
   static Failure handleException(dynamic error) {
-    if (error is DioError) {
+    if (error is DioException) {
       if (error.error is SocketException) {
         return const InternetConnectionFailure(
             message: 'Please check your internet connection.');
