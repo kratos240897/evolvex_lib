@@ -3,6 +3,8 @@ library evolvex_lib;
 export 'src/bloc/app_bloc_observer.dart';
 export 'src/bloc/base_bloc.dart';
 
+export 'src/cubit/base_cubit.dart';
+
 export 'src/error_handling/failure.dart';
 export 'src/error_handling/exception_handler.dart';
 
