@@ -11,13 +11,15 @@ class AppBlocObserver extends BlocObserver {
   @override
   void onChange(BlocBase bloc, Change change) {
     super.onChange(bloc, change);
-    debugPrint('onChange -- ${bloc.runtimeType}, $change');
+    debugPrint(
+        'onChange -- ${bloc.runtimeType}, currentState - ${change.currentState.runtimeType}, nextState - ${change.nextState.runtimeType}');
   }
 
   @override
   void onTransition(Bloc bloc, Transition transition) {
     super.onTransition(bloc, transition);
-    debugPrint('onTransition -- ${bloc.runtimeType}, $transition');
+    debugPrint(
+        'onTransition -- ${bloc.runtimeType}, currentState - ${transition.currentState.runtimeType}, nextState - ${transition.nextState.runtimeType}');
   }
 
   @override
