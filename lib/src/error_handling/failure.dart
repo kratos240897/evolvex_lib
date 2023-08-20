@@ -9,31 +9,28 @@ abstract class Failure extends Equatable {
   List<Object?> get props => [message];
 }
 
-class InternetConnectionFailure extends Failure {
-  const InternetConnectionFailure({required String message})
+class NoInternetConnection extends Failure {
+  const NoInternetConnection({required String message})
       : super(message: message);
 }
 
-class InternalServerFailure extends Failure {
-  const InternalServerFailure({required String message})
+class InternalServerError extends Failure {
+  const InternalServerError({required String message})
       : super(message: message);
 }
 
-class AuthorizationFailure extends Failure {
-  const AuthorizationFailure({required String message})
-      : super(message: message);
+class NotAuthorized extends Failure {
+  const NotAuthorized({required String message}) : super(message: message);
 }
 
-class RequestFailure extends Failure {
-  const RequestFailure({required String message})
-      : super(message: message);
+class BadRequest extends Failure {
+  const BadRequest({required String message}) : super(message: message);
 }
 
-class ResponseParseFailure extends Failure {
-  const ResponseParseFailure({required String message})
-      : super(message: message);
+class InvalidResponse extends Failure {
+  const InvalidResponse({required String message}) : super(message: message);
 }
 
-class UnknownFailure extends Failure {
-  const UnknownFailure({required String message}) : super(message: message);
+class UnknownError extends Failure {
+  const UnknownError({required String message}) : super(message: message);
 }

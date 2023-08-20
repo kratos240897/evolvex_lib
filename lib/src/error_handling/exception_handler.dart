@@ -6,28 +6,27 @@ class ExceptionHandler {
   static Failure handleException(dynamic error) {
     if (error is DioException) {
       if (error.error is SocketException) {
-        return const InternetConnectionFailure(
+        return const NoInternetConnection(
             message: 'Please check your internet connection.');
       }
       if (error.error is FormatException) {
-        return const ResponseParseFailure(
-            message: 'Invalid response from server.');
+        return const InvalidResponse(message: 'Invalid response from server.');
       }
       switch (error.response?.statusCode) {
         case 500:
-          return const InternalServerFailure(
+          return const InternalServerError(
               message: 'Server busy. Please try again after some time.');
         case 400:
-          return const RequestFailure(message: 'Bad request.');
+          return const BadRequest(message: 'Bad request.');
         case 401:
-          return const AuthorizationFailure(message: 'Unauthorized.');
+          return const NotAuthorized(message: 'Unauthorized.');
         default:
-          return const UnknownFailure(
+          return const UnknownError(
               message: 'Something went wrong. Please try again later.');
       }
     }
 
-    return const UnknownFailure(
+    return const UnknownError(
         message: 'Something went wrong. Please try again later.');
   }
 }
