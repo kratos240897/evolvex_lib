@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:evolvex_lib/evolvex_lib.dart';
+
+import '../bloc/base_bloc.dart';
 
 abstract class BaseCubit<S extends BaseState> extends Cubit<S> {
   final S initialState;
