@@ -13,6 +13,10 @@ abstract class ViewModelWidget<T extends ViewModel> extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    useEffect(() {
+      init(Provider.of<T>(context));
+      return null;
+    }, []);
     return Consumer<T>(builder: (context, viewModel, child) {
       return buildWidget(context, viewModel);
     });
