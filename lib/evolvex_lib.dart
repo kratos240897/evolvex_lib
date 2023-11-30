@@ -4,6 +4,8 @@ export 'src/state_management/bloc/app_bloc_observer.dart';
 export 'src/state_management/bloc/base_bloc.dart';
 
 export 'src/state_management/cubit/base_cubit.dart';
+export 'src/state_management/mvvm/view_model.dart';
+export 'src/state_management/mvvm/view_model_widget.dart';
 
 export 'src/error/failure.dart';
 export 'src/error/exception_handler.dart';
