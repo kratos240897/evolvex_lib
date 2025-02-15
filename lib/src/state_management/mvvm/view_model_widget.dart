@@ -19,7 +19,7 @@ abstract class ViewModelWidget<T extends ViewModel> extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.done) {
               return buildWidget(context, viewModel);
             }
-            return SizedBox.shrink();
+            return const SizedBox.shrink();
           });
     });
   }

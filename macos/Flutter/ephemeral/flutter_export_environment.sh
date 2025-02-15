@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/nexuzsurya/Documents/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/nexuzsurya/Documents/Projects/Flutter Packages/evolvex_lib"
+export "FLUTTER_ROOT=/Users/suryamanivannan/Development/flutter"
+export "FLUTTER_APPLICATION_PATH=/Users/suryamanivannan/Documents/Projects/evolvex_lib"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=0.0.1"
